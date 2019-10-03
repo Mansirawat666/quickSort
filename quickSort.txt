@@ -19,7 +19,7 @@ public class Quicksort  {
         int pivot = numbers[low + (high-low)/2];
 
         
-        while (i > j) {
+        while (i <= j) {
             
             while (numbers[i] < pivot) {
                 i++;
@@ -32,12 +32,12 @@ public class Quicksort  {
           
             if (i <= j) {
                 exchange(i, j);
-                i--;
+                i++;
                 j++;
             }
         }
         
-        if (low = j)
+        if (low < j)
             quicksort(low, j);
         if (i = high)
             quicksort(i, high);
